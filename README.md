@@ -1,10 +1,6 @@
-# Spotify-Track-Popularity-Analysis
-Sure! Here's the full README text — just copy everything below and paste it into the GitHub editor:
+# Spotify Track Popularity Analysis: Genre-Driven Audio Insights
 
-```markdown
-# Spotify-Track-Popularity-Analysis
-
-A data mining project focused on analysing and predicting the popularity of Spotify tracks. By leveraging audio features and genre metadata, the project uncovers what makes a song popular and groups tracks by their sonic characteristics.
+This repository contains a data mining project focused on analysing and predicting the popularity of Spotify tracks. By leveraging audio features and genre metadata, the project uncovers what makes a song popular and groups tracks by their sonic characteristics.
 
 This was a group project completed for the module **CS4168: Data Mining** at the **University of Limerick**.
 
@@ -21,9 +17,9 @@ Music streaming platforms host millions of tracks, yet popularity is concentrate
 - **Data Cleaning:** Identified and corrected a physically impossible loudness outlier (a value of ~800,000 dB, which is not possible — loudness is always negative), removed exact duplicate rows, and handled missing values using median imputation.
 - **Feature Engineering:** Constructed a binary popularity target (`popularity_binary`) by splitting tracks at the median popularity score; label-encoded the `track_genre` column for use in supervised models.
 - **Exploratory Data Analysis (EDA):** Visualised distributions of all 17 features, examined missing value patterns, analysed genre frequency, and explored correlations between audio features and popularity.
-- **Regression:** Predicted exact popularity scores (0–100) and compared Linear Regression, Ridge Regression, Decision Tree, Random Forest, and Gradient Boosting regressors using MAE, RMSE, and R².
-- **Classification:** Predicted whether a track is popular or not using Logistic Regression, Decision Tree, Random Forest, KNN, SVM, and Gradient Boosting classifiers with 5-fold cross-validation, hyperparameter tuning, and evaluation via accuracy, F1, and ROC-AUC.
-- **Clustering:** Grouped tracks by their nine core audio features (without genre labels) using K-Means and DBSCAN, evaluated cluster quality with silhouette score and Davies–Bouldin index, and used PCA for 2D visualisation.
+- **Predictive Modelling (Regression):** Predicted exact popularity scores (0–100) and compared Linear Regression, Ridge Regression, Decision Tree, Random Forest, and Gradient Boosting regressors using MAE, RMSE, and R².
+- **Predictive Modelling (Classification):** Predicted whether a track is popular or not using Logistic Regression, Decision Tree, Random Forest, KNN, SVM, and Gradient Boosting classifiers with 5-fold cross-validation, hyperparameter tuning, and evaluation via accuracy, F1, and ROC-AUC.
+- **Clustering (Descriptive Analytics):** Grouped tracks by their nine core audio features (without genre labels) using K-Means and DBSCAN, evaluated cluster quality with silhouette score and Davies–Bouldin index, and used PCA for 2D visualisation.
 
 ---
 
@@ -134,7 +130,4 @@ Clustering uses only the **9 core audio features**: `danceability`, `energy`, `l
    ```bash
    pip install pandas numpy matplotlib seaborn scikit-learn
    ```
-4. Run notebooks in the recommended order: `eda.ipynb` → then any of the three analysis notebooks.
-```
-
-I kept the repo title as `# Spotify-Track-Popularity-Analysis` to match your GitHub repo name.
+4. Run notebooks in the recommended order: `eda.ipynb` → then any of the three modelling notebooks.
